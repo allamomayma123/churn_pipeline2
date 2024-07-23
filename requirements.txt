@@ -4,3 +4,4 @@ mlflow
 pytest
 requests
 azure-cli
+python-dotenv
