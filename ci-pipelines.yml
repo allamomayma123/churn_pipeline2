@@ -20,8 +20,9 @@ steps:
   displayName: 'Install dependencies and pylint'
 
 - script: |
-    pylint src/
-  displayName: 'Run linter'
+    pip install flake8
+    flake8 src/
+  displayName: 'Run flake8 linter'
 
 - script: |
     pytest tests/
