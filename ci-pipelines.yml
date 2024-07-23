@@ -1,0 +1,32 @@
+# .azure-pipelines/ci-pipeline.yml
+trigger:
+  branches:
+    include:
+      - dev
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    pylint src/
+  displayName: 'Run linter'
+
+- script: |
+    pytest tests/
+  displayName: 'Run unit tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'Python Tests'
