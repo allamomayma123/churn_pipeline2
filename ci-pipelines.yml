@@ -16,7 +16,8 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-  displayName: 'Install dependencies'
+    pip install pylint
+  displayName: 'Install dependencies and pylint'
 
 - script: |
     pylint src/
