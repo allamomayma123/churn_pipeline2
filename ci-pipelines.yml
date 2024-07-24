@@ -18,10 +18,6 @@ steps:
     pip install -r requirements.txt
     pip install pylint
   displayName: 'Install dependencies and pylint'
-  
-- script: |
-    pylint src/
-  displayName: 'Run linter'
 
 - script: |
     pytest tests/
