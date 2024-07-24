@@ -2,6 +2,9 @@ import pandas as pd
 import os
 
 def preprocess_data(input_path, output_path):
+    """
+    Cette fonction fait quelque chose d'important.
+    """
     data = pd.read_csv(input_path)
     # Perform data cleaning and preprocessing
     master_table = data # For simplicity, assume it's processed

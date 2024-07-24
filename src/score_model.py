@@ -3,6 +3,9 @@ import pandas as pd
 from mlflow.tracking import MlflowClient
 
 def score_model(data_path):
+    """
+    Cette fonction fait quelque chose d'important.
+    """
     data = pd.read_csv(data_path)
     client = MlflowClient()
     model = mlflow.sklearn.load_model(f"models:/ChurnModel/Production")

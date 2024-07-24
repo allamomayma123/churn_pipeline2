@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def submit_databricks_job():
+    """
+    Cette fonction fait quelque chose d'important.
+    """
     url = "https://adb-3733434531606738.18.azuredatabricks.net/api/2.1/jobs/runs/submit"
     headers = {
         "Authorization": f"Bearer {os.getenv('DATABRICKS_TOKEN')}",
