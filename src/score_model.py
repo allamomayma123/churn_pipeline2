@@ -4,7 +4,7 @@ from mlflow.tracking import MlflowClient
 
 def score_model(data_path):
     """
-    Cette fonction fait quelque chose d'important.
+    Cette fonction fait le calcul des scores.
     """
     data = pd.read_csv(data_path)
     client = MlflowClient()

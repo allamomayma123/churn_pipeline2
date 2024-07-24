@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 
 def train_model(data_path):
     """
-    Cette fonction fait quelque chose d'important.
+    Cette fonction fait l'entrainement du modele.
     """
     data = pd.read_csv(data_path)
     X = data.drop('churn', axis=1)

@@ -3,7 +3,7 @@ import os
 
 def preprocess_data(input_path, output_path):
     """
-    Cette fonction fait quelque chose d'important.
+    Cette fonction fait le preprocessing de la data.
     """
     data = pd.read_csv(input_path)
     # Perform data cleaning and preprocessing

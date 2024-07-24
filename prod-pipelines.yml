@@ -1,0 +1,44 @@
+# .azure-pipelines/prod-pipeline.yml
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    pylint src/
+  displayName: 'Run linter'
+
+- script: |
+    pytest tests/
+  displayName: 'Run unit tests'
+
+- script: |
+    python src/update_master_table.py
+  displayName: 'Update Master Table'
+
+- script: |
+    python src/train_model.py
+  displayName: 'Train Model'
+
+- script: |
+    python src/submit_databricks_job.py --env production
+  displayName: 'Submit Databricks job'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'Python Tests'

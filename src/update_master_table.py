@@ -2,7 +2,7 @@ import pandas as pd
 
 def update_master_table(new_data_path, master_table_path):
     """
-    Cette fonction fait quelque chose d'important.
+    cette fonction fait update de la table master.
     """
     new_data = pd.read_csv(new_data_path)
     master_table = pd.read_csv(master_table_path)
