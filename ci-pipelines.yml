@@ -20,8 +20,9 @@ steps:
   displayName: 'Install dependencies and pylint'
 
 - script: |
-    pytest tests/
-  displayName: 'Run unit tests'
+    export PYTHONPATH=$(pwd)/src
+    pytest tests/ --junitxml=junit/test-results.xml
+  displayName: 'Run tests'
 
 - task: PublishTestResults@2
   inputs:
