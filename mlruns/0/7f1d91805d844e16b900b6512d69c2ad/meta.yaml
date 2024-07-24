@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/omaym/churn_prediction_project1/mlruns/0/7f1d91805d844e16b900b6512d69c2ad/artifacts
+end_time: 1721821728266
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f1d91805d844e16b900b6512d69c2ad
+run_name: zealous-toad-853
+run_uuid: 7f1d91805d844e16b900b6512d69c2ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721821704949
+status: 3
+tags: []
+user_id: omaym
