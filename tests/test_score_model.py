@@ -1,6 +1,13 @@
 import os
 import pandas as pd
-from src.score_model import score_model
+import sys
+
+# Add the src directory to the PYTHONPATH
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from score_model import score_model
+
+
 
 def test_score_model(monkeypatch, tmp_path):
     def mock_load_model(model_uri):

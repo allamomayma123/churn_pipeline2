@@ -1,5 +1,10 @@
 import requests
-from src.submit_databricks_job import submit_databricks_job
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from submit_databricks_job import submit_databricks_job
+
 
 def test_submit_databricks_job(monkeypatch):
     class MockResponse:

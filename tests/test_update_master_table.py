@@ -1,6 +1,10 @@
 import os
+import sys
 import pandas as pd
-from src.update_master_table import update_master_table
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from update_master_table import update_master_table
 
 def test_update_master_table(tmp_path):
     # Create sample input CSVs

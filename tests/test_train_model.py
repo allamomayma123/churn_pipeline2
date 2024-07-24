@@ -1,5 +1,9 @@
 import pandas as pd
-from src.train_model import train_model
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from train_model import train_model
 
 def test_train_model(monkeypatch, tmp_path):
     def mock_start_run():

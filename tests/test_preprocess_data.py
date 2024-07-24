@@ -1,6 +1,12 @@
+# tests/test_preprocess_data.py
+import sys
 import os
+
+# Add the src directory to the PYTHONPATH
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 import pandas as pd
-from src.data_preprocessing import preprocess_data
+from data_preprocessing import preprocess_data
 
 def test_preprocess_data(tmp_path):
     # Create a sample input CSV
