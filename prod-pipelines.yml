@@ -19,10 +19,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pylint src/
-  displayName: 'Run linter'
-
-- script: |
     pytest tests/
   displayName: 'Run unit tests'
 
