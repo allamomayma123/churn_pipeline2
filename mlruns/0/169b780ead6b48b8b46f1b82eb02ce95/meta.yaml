@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/omaym/churn_prediction_project1/mlruns/0/169b780ead6b48b8b46f1b82eb02ce95/artifacts
+end_time: 1721824997979
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 169b780ead6b48b8b46f1b82eb02ce95
+run_name: bald-hog-989
+run_uuid: 169b780ead6b48b8b46f1b82eb02ce95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721824983798
+status: 3
+tags: []
+user_id: omaym

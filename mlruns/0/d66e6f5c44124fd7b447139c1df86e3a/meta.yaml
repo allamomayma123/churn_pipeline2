@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/omaym/churn_prediction_project1/mlruns/0/d66e6f5c44124fd7b447139c1df86e3a/artifacts
+end_time: 1721824875690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d66e6f5c44124fd7b447139c1df86e3a
+run_name: capricious-sloth-363
+run_uuid: d66e6f5c44124fd7b447139c1df86e3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721824869425
+status: 3
+tags: []
+user_id: omaym
