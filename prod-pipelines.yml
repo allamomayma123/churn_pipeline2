@@ -23,10 +23,6 @@ steps:
   displayName: 'Run unit tests'
 
 - script: |
-    python src/update_master_table.py
-  displayName: 'Update Master Table'
-
-- script: |
     python src/train_model.py
   displayName: 'Train Model'
 
